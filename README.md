@@ -18,13 +18,23 @@ for product types.
 - Run And Deploy using Docker
 
 ## Run and deploy
-### Run commands
+### Docker Run commands
 ```
 docker build . -t compare-api
 ```
-
 ```
 docker run -p 8080:8080 compare-api
+```
+
+### In case Docker does not working, use gradle commands
+```
+./gradlew clean
+```
+```
+./gradlew build
+```
+```
+./gradlew bootRun
 ```
 
 The API will run on `http://localhost:8080`.

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "7945cc8c-bed2-4e9b-94f8-0c9319427b94",
+    "type": "ELECTRONIC",
+    "name": "Acme SuperPhone X",
+    "description": "A flagship smartphone with great camera",
+    "price": 899.99,
+    "rating": 4.6,
+    "specifications": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "battery": "4000mAh"
+    },
+    "imageUrl": "https://example.com/images/superphone.jpg"
+  },
+  {
+    "id": "198e8930-f445-493c-9b28-65bce08f7b43",
+    "type": "CLOTHING",
+    "name": "Acme T-Shirt",
+    "description": "100% cotton t-shirt",
+    "price": 19.99,
+    "rating": 4.2,
+    "specifications": {
+      "size": "M",
+      "material": "cotton",
+      "color": "black"
+    },
+    "imageUrl": "https://example.com/images/tshirt.jpg"
+  },
+  {
+    "id": "4d30ee30-8d5d-4842-8d89-c1ced6735590",
+    "type": "BOOK",
+    "name": "Clean Code",
+    "description": "A Handbook of Agile Software Craftsmanship by Robert C. Martin",
+    "price": 39.99,
+    "rating": 4.9,
+    "specifications": {
+      "author": "Robert C. Martin",
+      "pages": "464",
+      "language": "English"
+    },
+    "imageUrl": "https://example.com/images/cleancode.jpg"
+  },
+  {
+    "id": "a6cd5c31-451a-4ba3-b89a-188503d1198f",
+    "type": "FURNITURE",
+    "name": "Acme Office Chair",
+    "description": "Ergonomic office chair with adjustable height and lumbar support",
+    "price": 129.99,
+    "rating": 4.5,
+    "specifications": {
+      "material": "Mesh",
+      "color": "Gray",
+      "maxWeight": "120kg"
+    },
+    "imageUrl": "https://example.com/images/officechair.jpg"
+  },
+  {
+    "id": "7d2b15a8-e5d5-4998-a0b3-0122dab48d31",
+    "type": "ELECTRONIC",
+    "name": "Acme Noise-Cancelling Headphones",
+    "description": "Wireless over-ear headphones with active noise cancellation",
+    "price": 199.99,
+    "rating": 4.7,
+    "specifications": {
+      "batteryLife": "30h",
+      "bluetooth": "5.0",
+      "weight": "250g"
+    },
+    "imageUrl": "https://example.com/images/headphones.jpg"
+  },
+  {
+    "id": "7a29a08c-7937-4199-942a-a2d33aa89d24",
+    "type": "OTHER",
+    "name": "Acme Water Bottle",
+    "description": "Reusable stainless steel water bottle",
+    "price": 14.99,
+    "rating": 4.3,
+    "specifications": {
+      "capacity": "750ml",
+      "material": "Stainless Steel",
+      "insulated": "Yes"
+    },
+    "imageUrl": "https://example.com/images/waterbottle.jpg"
+  },
+  {
+    "id": "379a0f5f-e355-46d5-895b-9e1dfe276106",
+    "type": "CLOTHING",
+    "name": "Acme Winter Jacket",
+    "description": "Warm and waterproof winter jacket",
+    "price": 149.99,
+    "rating": 4.8,
+    "specifications": {
+      "size": "L",
+      "material": "Polyester",
+      "color": "Navy Blue"
+    },
+    "imageUrl": "https://example.com/images/jacket.jpg"
+  }
+]

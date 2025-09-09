@@ -13,8 +13,10 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copy fat JAR from build
-#COPY --from=build /app/build/libs/*.jar /app/
 COPY --from=build /app/build/libs/*-SNAPSHOT.jar app.jar
+
+# Copy products.json into container
+COPY ./data/products.json /app/data/products.json
 
 # Expose API port
 EXPOSE 8080

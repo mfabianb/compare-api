@@ -27,7 +27,7 @@ public class FileJsonProductRepository implements ProductRepository {
     private final ObjectMapper mapper = new ObjectMapper();
     private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 
-    @Value("${compare.data-file: products.json}")
+    @Value("${compare.data-file}")
     private String dataFilePath;
 
     private File dataFile;
@@ -36,7 +36,7 @@ public class FileJsonProductRepository implements ProductRepository {
     @PostConstruct
     public void init() throws IOException {
         // Resolve relative to classpath resources if possible
-        dataFile = new File(getClass().getClassLoader().getResource("products.json").getFile());
+        dataFile = new File(getClass().getClassLoader().getResource(dataFilePath).getFile());
         if (!dataFile.exists()) {
             Files.createDirectories(dataFile.getParentFile().toPath());
             mapper.writeValue(dataFile, Collections.emptyList());
