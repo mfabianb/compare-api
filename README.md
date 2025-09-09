@@ -44,7 +44,7 @@ The API will run on `http://localhost:8080`.
 
 Example:
 ```
-GET /api/products/compare?ids=UUID1,UUID2&fields=name,price,rating
+GET /api/v1/products/compare?ids=UUID1,UUID2&fields=name,price,rating
 ```
 
 You can use
@@ -68,11 +68,11 @@ API documentation available at:
 
 ### Compare Products
 ```http
-GET http://localhost:8080/api/products/compare?ids=UUID1,UUID2
+GET http://localhost:8080/api/v1/products/compare?ids=UUID1,UUID2
 ```
 
 ### Create Product
-POST /api/products
+POST /api/v1/products
 ```json
 {
   "id": "7945cc8c-bed2-4e9b-94f8-0c9319427b10",
@@ -98,9 +98,6 @@ POST /api/products
 - 400 Bad Request for invalid input and validation errors
 - 404 Not Found when resource doesn't exist
 - 500 Internal Server Error for unexpected failures
-
-
-
 
 ## Notes & Next steps
 - The file-based repository is simplistic: consider moving to a DB for production.
