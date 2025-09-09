@@ -2,7 +2,7 @@
 
 This is a sample RESTful API that provides product details designed for an item comparison feature.
 It follows hexagonal architecture principles (ports & adapters), uses local JSON file persistence
-(no database), supports pagination, filtering, HATEOAS links, and demonstrates Java inheritance/polymorphism
+(no database), supports pagination, filtering and demonstrates Java inheritance/polymorphism
 for product types.
 
 ## Features
@@ -15,6 +15,19 @@ for product types.
 - Error handling via `@ControllerAdvice`
 - Tests using JUnit 5 and Mockito (example included)
 - Swagger UI via springdoc-openapi at `/swagger-ui.html` (auto-configured)
+- Run And Deploy using Docker
+
+## Run and deploy
+### Run commands
+```
+docker build . -t compare-api
+```
+
+```
+docker run -p 8080:8080 compare-api
+```
+
+The API will run on `http://localhost:8080`.
 
 ## URI Examples
 - `GET /api/v1/products` — list products (supports `page`, `size`, `type`, `name`)
@@ -34,6 +47,15 @@ Example:
 GET /api/products/compare?ids=UUID1,UUID2&fields=name,price,rating
 ```
 
+You can use
+```
+UUID Product 1: 198e8930-f445-493c-9b28-65bce08f7b43
+```
+
+```
+UUID Product 2: 379a0f5f-e355-46d5-895b-9e1dfe276106
+```
+
 ---
 
 ## 📖 Swagger UI
@@ -50,8 +72,8 @@ GET http://localhost:8080/api/products/compare?ids=UUID1,UUID2
 ```
 
 ### Create Product
-```json
 POST /api/products
+```json
 {
   "id": "7945cc8c-bed2-4e9b-94f8-0c9319427b10",
   "type": "BOOK",
@@ -65,6 +87,7 @@ POST /api/products
   },
   "imageUrl": "https://example.com/images/cleancode.jpg"
 }
+```
 
 ## Pagination & Filtering
 - Pagination is 0-based: `?page=0&size=10`
@@ -76,12 +99,8 @@ POST /api/products
 - 404 Not Found when resource doesn't exist
 - 500 Internal Server Error for unexpected failures
 
-## Running
-Build and run with Gradle:
-```
-./gradlew bootRun
-```
-The API will run on `http://localhost:8080`.
+
+
 
 ## Notes & Next steps
 - The file-based repository is simplistic: consider moving to a DB for production.
