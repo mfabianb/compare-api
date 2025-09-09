@@ -11,7 +11,6 @@ for product types.
 - Product polymorphism with `Product` base class and example subtypes (`ElectronicProduct`, `ClothingProduct`)
 - REST endpoints with proper HTTP verbs and status codes
 - Pagination (`page` 0-based, `size`) and filtering (`type`, `name`)
-- HATEOAS links in responses
 - Local JSON persistence: `src/main/resources/data/products.json`
 - Error handling via `@ControllerAdvice`
 - Tests using JUnit 5 and Mockito (example included)
@@ -24,6 +23,48 @@ for product types.
 - `PUT /api/v1/products/{id}` — replace (200 or 404)
 - `PATCH /api/v1/products/{id}` — partial update (200 or 404)
 - `DELETE /api/v1/products/{id}` — delete (204 or 404)
+
+### Product Comparison
+| Method | Endpoint | Params | Description |
+|--------|-----------|--------|-------------|
+| `GET`  | `/api/products/compare` | `ids` (required), `fields` (optional) | Compare multiple products by ID. If `fields` is provided, only those fields are returned. |
+
+Example:
+```
+GET /api/products/compare?ids=UUID1,UUID2&fields=name,price,rating
+```
+
+---
+
+## 📖 Swagger UI
+API documentation available at:  
+👉 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+---
+
+## ⚡ Example Requests
+
+### Compare Products
+```http
+GET http://localhost:8080/api/products/compare?ids=UUID1,UUID2
+```
+
+### Create Product
+```json
+POST /api/products
+{
+  "id": "7945cc8c-bed2-4e9b-94f8-0c9319427b10",
+  "type": "BOOK",
+  "name": "Clean Code",
+  "description": "A Handbook of Agile Software Craftsmanship",
+  "price": 29.99,
+  "rating": 4.9,
+  "specifications": {
+    "author": "Robert C. Martin",
+    "pages": "464"
+  },
+  "imageUrl": "https://example.com/images/cleancode.jpg"
+}
 
 ## Pagination & Filtering
 - Pagination is 0-based: `?page=0&size=10`

@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  compare-api:
+    build: .
+    container_name: compare-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+    volumes:
+      - ./data:/app/data   # Mount local JSON storage (products.json)
